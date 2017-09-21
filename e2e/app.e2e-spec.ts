@@ -1,4 +1,6 @@
 import { AppPage } from './app.po';
+import {browser} from 'protractor';
+
 
 describe('bookshelf App', () => {
   let page: AppPage;
@@ -9,6 +11,7 @@ describe('bookshelf App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    browser.sleep(10000);
+    expect(page.getParagraphText()).toEqual('Hello from PrimeNG!');
   });
 });
