@@ -1,0 +1,7 @@
+<div>
+  <span *ngIf="(user | async)?.uid">
+    Welcome {{ (user | async)?.uid }}!
+  </span>
+  <button pButton (click)="login()" *ngIf="!(user | async)?.uid" class="ui-button-success" label="Anonymous Login"></button>
+  <button pButton (click)="logout()" *ngIf="(user | async)?.uid" class="ui-button-warning" label="Logout"></button>
+</div>
