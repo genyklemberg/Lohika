@@ -13,12 +13,16 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AppComponent} from './app.component';
 import {environment} from '../environments/environment';
 import { LoginPanelComponent } from './login-panel/login-panel.component';
+import { LoginComponent } from "./modals/login/login/login.component";
+import { DialogModule } from "primeng/components/dialog/dialog";
+import {CheckboxModule} from 'primeng/primeng';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginPanelComponent
+    LoginPanelComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import { LoginPanelComponent } from './login-panel/login-panel.component';
     HttpModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    DialogModule,
+    CheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

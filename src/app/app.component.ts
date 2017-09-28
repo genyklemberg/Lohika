@@ -4,7 +4,7 @@ import {ConfirmationService, Message} from 'primeng/components/common/api';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['app.components.css'],
   providers:  [ConfirmationService]
 })
 export class AppComponent {
@@ -40,4 +40,5 @@ export class AppComponent {
       }
     });
   }
+
 }
