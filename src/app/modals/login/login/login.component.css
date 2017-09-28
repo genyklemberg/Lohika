@@ -1,0 +1,113 @@
+button {
+    text-align: center;
+}
+.fa-facebook, .fa-google-plus {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: .75rem 1rem;
+}
+.fa-facebook {
+    background-color: #2399e5;
+    border: 1px solid #2399e5;
+    transition: background-color .2s;
+    text-align: center;
+    color: #ffffff;
+}
+.fa-facebook:hover {
+    background-color: #1f89ce;
+}
+.fa-facebook:before {
+    color: #ffffff;
+    padding-right: 1rem;
+}
+.fa-google-plus {
+    background-color: #db4437;
+    border: 1px solid #db4437;
+    transition: background-color .2s;
+    text-align: center;
+    color: #ffffff;
+}
+.fa-google-plus:hover {
+    background-color: #c53d31;
+}
+.fa-google-plus:before {
+    color: #ffffff;
+    padding-right: 1rem;
+}
+.ui-button-success, .ui-button-danger {
+    margin-bottom: 1rem;
+    margin-right: 0;
+    text-align: center;
+}
+
+/*!* todo create rotation effect to 'x' button *!*/
+/*.ng-tns-c4-1 .ui-dialog-titlebar-icon .ui-dialog-titlebar-close .ui-corner-all {*/
+    /*color: orangered;*/
+/*}*/
+/*.ui-dialog .ui-dialog-titlebar-close:hover {*/
+    /*color: orangered;*/
+/*}*/
+/*span .fa-close:before {*/
+/*transition: all 0.4s;*/
+/*will-change: transform;*/
+/*}*/
+/*span .fa-close:hover {*/
+/*transform: rotate(90deg);*/
+    /*color: orangered;*/
+/*}*/
+
+/* register modal styles */
+.fa-envelope, .fa-key {
+    margin-right: 0;
+}
+
+.btn-reg {
+    margin-top: 1rem;
+}
+
+.check {
+    padding-left: 0;
+    padding-right: 0;
+}
+p.remember {
+    margin-top: 5px;
+    font-size: 0.7rem;
+    color: #c0c0c0;
+    padding-left: 0;
+    padding-right: 0;
+}
+p.forgot {
+    margin-top: 5px;
+    font-size: 0.7rem;
+    padding-left: 0;
+}
+p.forgot a {
+    color: #db4437;
+    text-decoration: none;
+}
+
+.lead, .desc {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+.desc {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.hr {
+    border-top: 1px solid #c0c0c0;
+    margin: 1rem auto 0;
+}
+.reg-text, .reg-text-red {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.2rem;
+}
+.reg-text-red {
+    color: #db4437;
+}
