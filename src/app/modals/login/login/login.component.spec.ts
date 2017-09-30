@@ -1,5 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { DialogModule } from 'primeng/components/dialog/dialog';
+import { CheckboxModule } from 'primeng/primeng';
 import { LoginComponent } from './login.component';
 
 describe('LoginComponent', () => {
@@ -8,9 +11,14 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
+      imports: [
+        BrowserAnimationsModule,
+        FormsModule,
+        DialogModule,
+        CheckboxModule
+      ],
+      declarations: [LoginComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
