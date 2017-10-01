@@ -16,13 +16,17 @@ import { LoginPanelComponent } from './login-panel/login-panel.component';
 import { LoginComponent } from "./modals/login/login/login.component";
 import { DialogModule } from "primeng/components/dialog/dialog";
 import {CheckboxModule} from 'primeng/primeng';
+import { BooksListComponent } from './books-list/books-list.component';
+import { BooksListItemComponent } from './books-list-item/books-list-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPanelComponent,
-    LoginComponent
+    LoginComponent,
+    BooksListComponent,
+    BooksListItemComponent
   ],
   imports: [
     BrowserModule,

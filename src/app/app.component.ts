@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-import {ConfirmationService, Message} from 'primeng/components/common/api';
+import { ConfirmationService, Message} from 'primeng/components/common/api';
+import { BookService} from './book.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['app.components.css'],
-  providers:  [ConfirmationService]
+  providers:  [
+    ConfirmationService,
+    BookService
+  ]
 })
 export class AppComponent {
 

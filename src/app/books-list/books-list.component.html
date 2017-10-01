@@ -1,0 +1,10 @@
+<section class="ui-g">
+  <app-books-list-item 
+    *ngFor="let book of books | async" 
+    class="ui-g-6 ui-md-3 ui-lg-2"
+    name="{{book.volumeInfo.title}}"
+    image="{{getThumbnail(book)}}"
+  ></app-books-list-item>
+</section>
+  
+
