@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../book.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { IBook } from '../../models/book';
 
 @Component({
   selector: 'app-books-list',
@@ -8,7 +9,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
   styleUrls: ['./books-list.component.css']
 })
 export class BooksListComponent implements OnInit {
-  books: FirebaseListObservable<any[]>;
+  books: FirebaseListObservable<IBook[]>;
 
   constructor(private bookService: BookService) {
     this.books = this.bookService.getBooks();
