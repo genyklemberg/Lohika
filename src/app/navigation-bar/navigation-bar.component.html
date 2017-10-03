@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let category of categories">
+    <a routerLink="./books/{{category.hash}}">{{category.caption}}</a>
+  </li>
+</ul>
