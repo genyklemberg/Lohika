@@ -1,13 +1,14 @@
-<app-login-panel></app-login-panel>
 
-<div class="ui-g">
-  <div class="ui-g-4">
-    <app-catalog-bar></app-catalog-bar>
-  </div>
+<h1>{{title}}</h1>
 
-  <div class="ui-g-8">
-    <router-outlet></router-outlet>
-  </div>
+<p>
+  <app-login-panel></app-login-panel>
+</p>
 
-</div>
+<input type="text" pInputText placeholder="Enter your name"
+       (change)="onChangeEvent($event)" />
+<button pButton type="text"
+        (click)="greetMe()" icon="fa-check" label="Greet me"></button>
 
+<p> {{theUserSaid}} </p>
+<p-confirmDialog width="400"></p-confirmDialog>
