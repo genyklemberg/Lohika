@@ -1,0 +1,137 @@
+<div class="ui-g-12">
+  <div class="ui-g-12 ui-md-2 ui-md-offset-8">
+    <button pButton type="button" (click)="login()" label="Sign In"></button>
+  </div>
+  <div class="ui-g-12 ui-md-2">
+    <button pButton type="button" (click)="register()" label="Register"></button>
+  </div>
+</div>
+
+<!-- Login Form -->
+<p-dialog
+    header="Login Form"
+    [(visible)]="display"
+    [draggable]=false
+    [width]="300">
+  <label for="email" class="ui-g-12">Email</label>
+  <i class="fa fa-envelope ui-g-12 ui-md-2" aria-hidden="true"></i>
+  <input class="ui-g-12 ui-md-10" id="email"
+    type="email" pInputText placeholder="Enter your Email" />
+
+  <label for="password" class="ui-g-12">Password</label>
+  <i class="fa fa-key ui-g-12 ui-md-2" aria-hidden="true"></i>
+  <input class="ui-g-12 ui-md-10" id="password"
+         type="password" pInputText placeholder="Enter your Password" />
+
+  <div class="check ui-g-12">
+    <p-checkbox
+        class="ui-g-12 ui-md-2"
+        name="groupname"
+        value="val1"
+        [(ngModel)]="selectedValues">
+    </p-checkbox>
+    <p class="ui-g-12 ui-md-5 remember">Remember Me</p>
+    <p class="ui-g-12 ui-md-5 forgot"><a href="#" (click)="forgot(); display=false;">Forgot Password?</a></p>
+  </div>
+
+  <div class="login">
+    <button pButton type="button"
+            class="ui-button-success ui-g-12 ui-md-5" label="LogIn"></button>
+  </div>
+
+  <div class="cancel">
+    <button pButton type="button"
+        class="ui-button-danger ui-g-12 ui-md-5 ui-md-offset-2" label="Cancel"
+        (click)="display=false"></button>
+  </div>
+
+
+  <p class="log ui-g-12 ui-md-12 lead">LogIn</p>
+  <p class="log ui-g-12 ui-md-12 desc">with your social media account</p>
+  <div class="facebook" title="LogIn with Facebook">
+    <i class="fa fa-facebook ui-g-12 ui-md-12" aria-hidden="true">Facebook</i>
+  </div>
+  <div class="google" title="LogIn with Google+">
+    <i class="fa fa-google-plus ui-g-12 ui-md-12" aria-hidden="true">Google+</i>
+  </div>
+
+  <div class="hr ui-g-12"></div>
+
+  <div class="register">
+    <p class="reg-text ui-g-12">Don't have an Account?</p>
+    <p class="reg-text-red ui-g-12">Register now!</p>
+    <button pButton type="button"
+        class="ui-button-info ui-g-12 ui-md-12" label="Register"
+        (click)="register()"></button>
+  </div>
+</p-dialog><!-- /LoginForm -->
+
+<!-- Register Form -->
+<p-dialog
+    header="Register Form"
+    [(visible)]="display_reg"
+    [draggable]=false
+    [width]="300">
+  <label for="reg-email" class="ui-g-12">Email</label>
+  <i class="fa fa-envelope ui-g-12 ui-md-2" aria-hidden="true"></i>
+  <input class="ui-g-12 ui-md-10" id="reg-email"
+         type="email" pInputText placeholder="Enter your Email" />
+
+  <label for="reg-password" class="ui-g-12">Password</label>
+  <i class="fa fa-key ui-g-12 ui-md-2" aria-hidden="true"></i>
+  <input class="ui-g-12 ui-md-10" id="reg-password"
+         type="password" pInputText placeholder="Enter your Password" />
+
+  <label for="rep-password" class="ui-g-12">Repeat Password</label>
+  <i class="fa fa-key ui-g-12 ui-md-2" aria-hidden="true"></i>
+  <input class="ui-g-12 ui-md-10" id="rep-password"
+         type="password" pInputText placeholder="Repeat your Password" />
+
+  <label for="name" class="ui-g-12">Your Name</label>
+  <i class="fa fa-user ui-g-12 ui-md-2" aria-hidden="true"></i>
+  <input class="ui-g-12 ui-md-10" id="name"
+         type="text" pInputText placeholder="Your Name" />
+
+  <label for="age" class="ui-g-12">Your Age</label>
+  <input class="ui-g-12 ui-md-12" id="age"
+         type="number" pInputText placeholder="Your Age" />
+
+  <div class="submit">
+    <button pButton type="button"
+        class="ui-button-success ui-g-12 ui-md-5 btn-reg" label="Submit"></button>
+  </div>
+
+  <div class="cancel">
+    <button pButton type="button"
+        class="ui-button-danger ui-g-12 ui-md-5 ui-md-offset-2 btn-reg" label="Cancel"
+        (click)="display_reg=false"></button>
+  </div>
+
+</p-dialog><!-- /RegisterForm -->
+
+<!-- Forgot Form -->
+<p-dialog
+    header="Retrieve Password"
+    [(visible)]="display_forgot_pass"
+    [draggable]=false
+    [width]="300">
+    <label for="forgot" class="ui-g-12">Please enter the email address associated with your account</label>
+    <i class="fa fa-envelope ui-g-12 ui-md-2" aria-hidden="true"></i>
+    <input class="ui-g-12 ui-md-10" id="forgot"
+        type="email" pInputText placeholder="Enter your Email" />
+
+  <div class="buttons ui-g-12">
+    <div class="submit">
+      <button pButton type="button"
+              class="ui-button-success ui-g-12 ui-md-5 btn-forgot" label="Submit"></button>
+    </div>
+
+    <div class="cancel">
+      <button pButton type="button"
+              class="ui-button-danger ui-g-12 ui-md-5 ui-md-offset-2 btn-forgot" label="Cancel"
+              (click)="display_forgot_pass=false"></button>
+    </div>
+  </div>
+
+
+</p-dialog><!-- /ForgotForm -->

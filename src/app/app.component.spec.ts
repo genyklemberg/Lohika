@@ -1,18 +1,38 @@
 import { TestBed, async } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Observable } from 'rxjs/Observable';
+import * as firebase from 'firebase/app';
+
+import { DialogModule } from 'primeng/components/dialog/dialog';
+import { CheckboxModule, ConfirmDialogModule } from 'primeng/primeng';
+
 import { AppComponent } from './app.component';
-import {ConfirmDialogModule} from 'primeng/primeng';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { LoginPanelComponent } from './dialogs/login-panel/login-panel.component';
+import { LoginComponent } from './dialogs/login/login/login.component';
 
 describe('AppComponent', () => {
-  beforeEach(async() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
       imports: [
+        FormsModule,
         ConfirmDialogModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        DialogModule,
+        CheckboxModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        LoginPanelComponent,
+        LoginComponent
       ],
+      providers: [
+        {
+          provide: AngularFireAuth,
+          useValue: { authState: new Observable<firebase.User>(observer => observer.next({} as firebase.User)) }
+        }
+      ]
     }).compileComponents();
   });
   it('should create the app', async(() => {

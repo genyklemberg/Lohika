@@ -2,7 +2,11 @@
 <h1>{{title}}</h1>
 
 <p>
-  <app-login-panel></app-login-panel>
+  <app-login-panel class="ui-g-12 ui-md-6"></app-login-panel>
+</p>
+
+<p>
+  <app-login-modal class="ui-g-12 ui-md-6"></app-login-modal>
 </p>
 
 <input type="text" pInputText placeholder="Enter your name"
@@ -12,3 +16,4 @@
 
 <p> {{theUserSaid}} </p>
 <p-confirmDialog width="400"></p-confirmDialog>
+<app-books-list></app-books-list>
