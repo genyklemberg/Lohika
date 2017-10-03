@@ -65,6 +65,12 @@ button {
 .btn-reg {
     margin-top: 1rem;
 }
+.btn-forgot {
+    margin-top: 0.5rem;
+}
+.buttons {
+    padding-right: 0;
+}
 
 .check {
     padding-left: 0;

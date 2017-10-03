@@ -1,4 +1,4 @@
-<div class="ui-g">
+<div class="ui-g-12">
   <div class="ui-g-12 ui-md-2 ui-md-offset-8">
     <button pButton type="button" (click)="login()" label="Sign In"></button>
   </div>
@@ -25,13 +25,13 @@
 
   <div class="check ui-g-12">
     <p-checkbox
-            class="ui-g-12 ui-md-2"
-            name="groupname"
-            value="val1"
-            [(ngModel)]="selectedValues">
+        class="ui-g-12 ui-md-2"
+        name="groupname"
+        value="val1"
+        [(ngModel)]="selectedValues">
     </p-checkbox>
     <p class="ui-g-12 ui-md-5 remember">Remember Me</p>
-    <p class="ui-g-12 ui-md-5 forgot"><a href="#">Forgot Password?</a></p>
+    <p class="ui-g-12 ui-md-5 forgot"><a href="#" (click)="forgot(); display=false;">Forgot Password?</a></p>
   </div>
 
   <div class="login">
@@ -41,7 +41,8 @@
 
   <div class="cancel">
     <button pButton type="button"
-            class="ui-button-danger ui-g-12 ui-g-12 ui-md-5 ui-md-offset-2" label="Cancel"></button>
+        class="ui-button-danger ui-g-12 ui-md-5 ui-md-offset-2" label="Cancel"
+        (click)="display=false"></button>
   </div>
 
 
@@ -60,7 +61,8 @@
     <p class="reg-text ui-g-12">Don't have an Account?</p>
     <p class="reg-text-red ui-g-12">Register now!</p>
     <button pButton type="button"
-            class="ui-button-info ui-g-12 ui-md-12" label="Register"></button>
+        class="ui-button-info ui-g-12 ui-md-12" label="Register"
+        (click)="register()"></button>
   </div>
 </p-dialog><!-- /LoginForm -->
 
@@ -96,12 +98,40 @@
 
   <div class="submit">
     <button pButton type="button"
-            class="ui-button-success ui-g-12 ui-md-5 btn-reg" label="Submit"></button>
+        class="ui-button-success ui-g-12 ui-md-5 btn-reg" label="Submit"></button>
   </div>
 
   <div class="cancel">
     <button pButton type="button"
-            class="ui-button-danger ui-g-12 ui-g-12 ui-md-5 ui-md-offset-2 btn-reg" label="Cancel"></button>
+        class="ui-button-danger ui-g-12 ui-md-5 ui-md-offset-2 btn-reg" label="Cancel"
+        (click)="display_reg=false"></button>
   </div>
 
 </p-dialog><!-- /RegisterForm -->
+
+<!-- Forgot Form -->
+<p-dialog
+    header="Retrieve Password"
+    [(visible)]="display_forgot_pass"
+    [draggable]=false
+    [width]="300">
+    <label for="forgot" class="ui-g-12">Please enter the email address associated with your account</label>
+    <i class="fa fa-envelope ui-g-12 ui-md-2" aria-hidden="true"></i>
+    <input class="ui-g-12 ui-md-10" id="forgot"
+        type="email" pInputText placeholder="Enter your Email" />
+
+  <div class="buttons ui-g-12">
+    <div class="submit">
+      <button pButton type="button"
+              class="ui-button-success ui-g-12 ui-md-5 btn-forgot" label="Submit"></button>
+    </div>
+
+    <div class="cancel">
+      <button pButton type="button"
+              class="ui-button-danger ui-g-12 ui-md-5 ui-md-offset-2 btn-forgot" label="Cancel"
+              (click)="display_forgot_pass=false"></button>
+    </div>
+  </div>
+
+
+</p-dialog><!-- /ForgotForm -->

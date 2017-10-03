@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
 
   display: boolean = false;
   display_reg: boolean = false;
+  display_forgot_pass: boolean = false;
 
   login() {
     this.display = true;
@@ -22,6 +23,11 @@ export class LoginComponent implements OnInit {
   register() {
     this.display_reg = true;
     console.log('register');
+  }
+
+  forgot() {
+      this.display_forgot_pass = true;
+      console.log('forgot');
   }
 
   selectedValues: string[] = [];
