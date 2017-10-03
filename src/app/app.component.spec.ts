@@ -9,8 +9,8 @@ import { DialogModule } from 'primeng/components/dialog/dialog';
 import { CheckboxModule, ConfirmDialogModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
-import { LoginPanelComponent } from './login-panel/login-panel.component';
-import { LoginComponent } from './modals/login/login/login.component';
+import { LoginPanelComponent } from './dialogs/login-panel/login-panel.component';
+import { LoginComponent } from './dialogs/login/login/login.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

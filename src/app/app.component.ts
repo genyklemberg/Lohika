@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ConfirmationService, Message} from 'primeng/components/common/api';
-import { BookService} from './book.service';
+import { BookService} from './services/book.service';
 
 @Component({
   selector: 'app-root',
