@@ -24,6 +24,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { PageNotFoundComponent } from './not-found.component';
 import { HeaderComponent } from './header/header.component';
 import { BookProfileComponent } from './books/book-profile/book-profile.component';
+import { CategoryListComponent } from './category-list/category-list.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { BookProfileComponent } from './books/book-profile/book-profile.componen
     NavigationBarComponent,
     PageNotFoundComponent,
     HeaderComponent,
-    BookProfileComponent
+    BookProfileComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,
