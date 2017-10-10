@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IBookCategory } from '../models/book-category';
+import {CategoryService} from '../services/category.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -8,14 +9,10 @@ import { IBookCategory } from '../models/book-category';
 })
 export class NavigationBarComponent implements OnInit {
   categories: IBookCategory[];
-  constructor() { }
+  constructor(private categoriesService: CategoryService) { }
 
   ngOnInit() {
-    this.categories = [
-      {hash: 'scientific', id: 'scientific', caption: 'Scientific'},
-      {hash: 'fantasy', id: 'fantasy', caption: 'Fantasy'},
-      {hash: 'classic', id: 'classic', caption: 'Classic'},
-    ];
+    this.categories = this.categoriesService.getCategories();
   }
 
 }

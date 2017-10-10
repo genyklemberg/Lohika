@@ -5,12 +5,14 @@ import { PageNotFoundComponent } from './not-found.component';
 import { HomeComponent } from './home/home.component';
 import { BooksListComponent } from './books/books-list/books-list.component';
 import { BookProfileComponent } from './books/book-profile/book-profile.component';
+import { CategoryListComponent } from './category-list/category-list.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'books/:category', component: BooksListComponent },
-  { path: 'books/profile/:id', component: BookProfileComponent},
   { path: '',   redirectTo: 'home', pathMatch: 'full' },
+  { path: 'books/:category', component: CategoryListComponent },
+  { path: 'books/:category/:subCategory', component: BooksListComponent },
+  { path: 'books/profile/:id', component: BookProfileComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 
