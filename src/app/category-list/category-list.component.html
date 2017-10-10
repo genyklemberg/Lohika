@@ -1,0 +1,10 @@
+<p>
+  category-list works!
+</p>
+<nav>
+  <ul>
+    <li *ngFor="let category of activeCategory.categories">
+      <a routerLink="./{{category.hash}}">{{category.caption}}</a>
+    </li>
+  </ul>
+</nav>
