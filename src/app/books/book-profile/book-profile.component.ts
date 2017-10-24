@@ -14,6 +14,7 @@ export class BookProfileComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log(this.route)
     this.name = this.route.snapshot.paramMap.get('id');
   }
 
