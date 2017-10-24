@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 
-import { InputTextModule, ButtonModule, ConfirmDialogModule } from 'primeng/primeng';
+import { InputTextModule, ButtonModule, ConfirmDialogModule, PanelModule, EditorModule } from 'primeng/primeng';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +24,8 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { PageNotFoundComponent } from './not-found.component';
 import { HeaderComponent } from './header/header.component';
 import { BookProfileComponent } from './books/book-profile/book-profile.component';
+import { CommentsListComponent } from './common/comments-list/comments-list.component';
+import { CommentsListItemComponent } from './common/comments-list/comments-list-item/comments-list-item.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 
 @NgModule({
@@ -38,6 +40,8 @@ import { CategoryListComponent } from './category-list/category-list.component';
     PageNotFoundComponent,
     HeaderComponent,
     BookProfileComponent,
+    CommentsListComponent,
+    CommentsListItemComponent,
     CategoryListComponent
   ],
   imports: [
@@ -53,7 +57,9 @@ import { CategoryListComponent } from './category-list/category-list.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     DialogModule,
-    CheckboxModule
+    CheckboxModule,
+    PanelModule,
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

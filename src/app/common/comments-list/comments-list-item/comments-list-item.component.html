@@ -1,0 +1,17 @@
+<p-panel 
+  header="{{comment.author}}"
+  [toggleable]="true"
+  [style]="{'margin-bottom':'20px'}">
+  
+  <span [innerHtml]="comment.message"></span>
+  
+  <p-panel 
+    *ngFor="let subComment of comment.subComments"
+    header="{{subComment.author}}"
+    [toggleable]="true"
+    [style]="{'margin-top':'20px'}">
+    
+    <span [innerHtml]="subComment.message"></span>
+  </p-panel>
+
+</p-panel>
