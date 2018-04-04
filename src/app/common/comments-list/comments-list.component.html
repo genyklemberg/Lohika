@@ -1,0 +1,16 @@
+<p-panel
+  header="Comments"
+  [toggleable]="true">
+
+  <app-comments-list-item
+    *ngFor="let comment of comments"
+    [comment]="comment">
+  </app-comments-list-item>
+
+  <p-editor [(ngModel)]="newComment" [style]="{'height':'120px'}"></p-editor>
+
+  <p-footer>
+    <button pButton type="button" icon="fa-plus" label="Send comment" class="ui-button-success" (click)="sendCommentHandler(newComment)"></button>
+  </p-footer>
+
+</p-panel>

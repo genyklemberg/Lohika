@@ -2,3 +2,5 @@
 <div>Popular</div>
 <div>Newest</div>
 <app-books-list></app-books-list>
+
+<app-comments-list [comments]="comments" (sendComment)="sendComment($event)"></app-comments-list>
